@@ -1,0 +1,58 @@
+[
+  {
+    "_id": 1,
+    "studentImage": "https://example.com/images/student1.jpg",
+    "studentName": "Aarav Rahman",
+    "review": "I absolutely love the HIIT Blast class! It's challenging but so much fun. The instructors are fantastic and motivate us throughout the workout. Highly recommended!",
+    "rating": 5,
+    "reviewDate": "2023-08-05"
+  },
+  {
+    "_id": 2,
+    "studentImage": "https://example.com/images/student2.jpg",
+    "studentName": "Sara Khan",
+    "review": "The Yoga Fusion class has been a life-changer for me. It's helped me improve my flexibility and reduce stress. The instructor is amazing and provides great guidance. Definitely worth it!",
+    "rating": 4.5,
+    "reviewDate": "2023-08-06"
+  },
+  {
+    "_id": 3,
+    "studentImage": "https://example.com/images/student3.jpg",
+    "studentName": "Arjun Gupta",
+    "review": "Zumba Dance Party is so much fun! I never thought I'd enjoy working out, but the dance moves and music make it enjoyable. The instructor's energy is infectious. I look forward to every class!",
+    "rating": 4,
+    "reviewDate": "2023-08-04"
+  },
+  {
+    "_id": 4,
+    "studentImage": "https://example.com/images/student4.jpg",
+    "studentName": "Ayesha Patel",
+    "review": "The AquaFit class is refreshing and relaxing. It's a great way to stay fit without stressing my joints. The instructor is knowledgeable and ensures we have a safe and effective workout.",
+    "rating": 4.8,
+    "reviewDate": "2023-08-02"
+  },
+  {
+    "_id": 5,
+    "studentImage": "https://example.com/images/student5.jpg",
+    "studentName": "Zayan Ahmed",
+    "review": "Mindful Meditation has been a game-changer for my mental health. It helps me destress and find inner peace. The instructor's calming voice makes the experience even better!",
+    "rating": 5,
+    "reviewDate": "2023-08-07"
+  },
+  {
+    "_id": 6,
+    "studentImage": "https://example.com/images/student6.jpg",
+    "studentName": "Alisha Das",
+    "review": "I've been attending the Pilates Fusion class for a few weeks, and I already feel stronger and more flexible. The instructor pays attention to everyone and gives helpful tips.",
+    "rating": 4.2,
+    "reviewDate": "2023-08-03"
+  },
+  {
+    "_id": 7,
+    "studentImage": "https://example.com/images/student7.jpg",
+    "studentName": "Rohan Choudhury",
+    "review": "BoxFit is an intense and empowering class. The instructor pushes us to our limits, and the results are worth it. I feel more confident and energetic after each session.",
+    "rating": 4.7,
+    "reviewDate": "2023-08-01"
+  }
+]

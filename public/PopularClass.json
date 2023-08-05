@@ -1,0 +1,172 @@
+[
+    {
+      "_id": 1,
+      "category": "HIIT",
+      "name": "HIIT Blast - High-Intensity Interval Training",
+      "description": "HIIT Blast is an exhilarating and challenging workout that combines bursts of intense exercises with short periods of rest. This high-energy class is designed to burn maximum calories, improve cardiovascular fitness, and boost metabolism. Our expert trainers will lead you through a variety of bodyweight exercises, plyometrics, and strength training drills, ensuring a full-body workout that pushes you to your limits. Get ready to sweat, burn fat, and experience the benefits of HIIT training in a fun and supportive group setting.",
+      "enrolledStudents": 25,
+      "instructor": "John Doe",
+      "duration": "1 hour",
+      "fee": 30
+    },
+    {
+      "_id": 2,
+      "category": "Yoga",
+      "name": "Yoga Fusion - Balance & Harmony",
+      "description": "Yoga Fusion is a unique blend of traditional yoga practices and modern fitness techniques. This class focuses on enhancing flexibility, balance, and strength while promoting inner peace and relaxation. Our skilled instructors will guide you through a mix of yoga poses, flows, and mindful movements, helping you find harmony between mind and body. Whether you're a beginner or an experienced yogi, Yoga Fusion provides a serene environment to recharge, improve posture, and cultivate mindfulness.",
+      "enrolledStudents": 20,
+      "instructor": "Jane Smith",
+      "duration": "1.5 hours",
+      "fee": 25
+    },
+    {
+      "_id": 3,
+      "category": "Strength Training",
+      "name": "Strength & Sculpt - Tone Your Muscles",
+      "description": "Strength & Sculpt is a dynamic class that targets all major muscle groups to help you build lean muscle and define your physique. Through a combination of resistance training, free weights, and bodyweight exercises, this class aims to strengthen and tone your muscles effectively. Our experienced trainers will provide personalized guidance and modifications, making this class suitable for participants of all fitness levels. If you're looking to sculpt your body and increase overall strength, Strength & Sculpt is the perfect choice.",
+      "enrolledStudents": 18,
+      "instructor": "Mike Johnson",
+      "duration": "1.5 hours",
+      "fee": 28
+    },
+    {
+      "_id": 4,
+      "category": "Dance",
+      "name": "Zumba Dance Party - Groove & Sweat",
+      "description": "Zumba Dance Party is a high-energy dance fitness class that feels more like a dance party than a workout. Move and groove to infectious music as our enthusiastic instructors lead you through easy-to-follow dance routines. This class is designed to burn calories, improve coordination, and boost your mood. Whether you're a seasoned dancer or have two left feet, Zumba Dance Party is a fantastic way to have fun, shed stress, and dance your way to fitness.",
+      "enrolledStudents": 30,
+      "instructor": "Emily Davis",
+      "duration": "1 hour",
+      "fee": 22
+    },
+    {
+      "_id": 5,
+      "category": "Cardio",
+      "name": "Spin Cycle - Ride to the Rhythm",
+      "description": "Spin Cycle is a heart-pumping indoor cycling class that simulates outdoor bike rides with various terrains and intensity levels. Pedal to the beat of energizing music as our motivating instructors guide you through challenging hill climbs, sprints, and intervals. This cardio-focused class not only burns calories but also improves endurance, stamina, and lower-body strength. Join Spin Cycle for a sweat-drenched ride that leaves you feeling empowered and accomplished.",
+      "enrolledStudents": 15,
+      "instructor": "Alex Turner",
+      "duration": "1 hour",
+      "fee": 20
+    },
+    {
+      "_id": 6,
+      "category": "Mindfulness",
+      "name": "Mindful Meditation - Find Inner Calm",
+      "description": "Mindful Meditation is a tranquil class that introduces meditation techniques to help you reduce stress, improve focus, and find inner calm. Led by experienced meditation guides, this class incorporates mindfulness practices, deep breathing, and relaxation exercises. Take a break from the fast-paced world and experience the benefits of quieting the mind and being present. Whether you're new to meditation or seeking to deepen your practice, Mindful Meditation offers a sanctuary of peace and rejuvenation.",
+      "enrolledStudents": 12,
+      "instructor": "Sophia Lee",
+      "duration": "1 hour",
+      "fee": 15
+    },
+    {
+      "_id": 7,
+      "category": "Pilates",
+      "name": "Pilates Fusion - Core Strengthening",
+      "description": "Pilates Fusion is a low-impact class that focuses on core strengthening and flexibility. Combining elements of Pilates, yoga, and bodyweight exercises, this class aims to improve posture, balance, and overall body awareness. Our skilled instructors will guide you through controlled movements, helping you build a strong and stable core. Whether you're recovering from an injury or seeking to enhance your core strength, Pilates Fusion is perfect for all fitness levels.",
+      "enrolledStudents": 16,
+      "instructor": "Olivia Williams",
+      "duration": "1 hour",
+      "fee": 26
+    },
+    {
+      "_id": 8,
+      "category": "Boxing",
+      "name": "BoxFit - Empower Your Inner Fighter",
+      "description": "BoxFit is a high-energy boxing-inspired class that will challenge both your body and mind. Learn the fundamentals of boxing techniques, including jabs, hooks, and footwork, while getting an intense full-body workout. Our experienced trainers will motivate you to unleash your inner fighter and push your limits. Whether you're looking to relieve stress, improve coordination, or boost cardiovascular fitness, Boxfit is the perfect way to unleash your inner warrior.",
+      "enrolledStudents": 22,
+      "instructor": "David Martinez",
+      "duration": "1 hour",
+      "fee": 24
+    },
+    {
+      "_id": 9,
+      "category": "Bootcamp",
+      "name": "Bootcamp Challenge - Total Body Conditioning",
+      "description": "Bootcamp Challenge is a dynamic class that combines strength training, cardio, and functional exercises for a full-body conditioning workout. Challenge yourself with obstacle courses, circuit training, and team-based drills to achieve your fitness goals. Our dedicated trainers will guide and motivate you to push past your limits, boosting strength, endurance, and overall fitness. Get ready for a fun and challenging experience in Bootcamp Challenge.",
+      "enrolledStudents": 20,
+      "instructor": "Sarah Johnson",
+      "duration": "1.5 hours",
+      "fee": 28
+    },
+    {
+      "_id": 10,
+      "category": "Aquatics",
+      "name": "AquaFit - Water Workout",
+      "description": "AquaFit is a refreshing and low-impact workout conducted in the pool. Utilizing the resistance of water, this class offers a joint-friendly and effective exercise option. Improve cardiovascular fitness, strength, and flexibility while staying cool in the water. Our certified instructors will lead you through aqua aerobics, water jogging, and aquatic exercises that target various muscle groups. Dive into AquaFit and experience the unique benefits of a water workout.",
+      "enrolledStudents": 14,
+      "instructor": "Michael Thompson",
+      "duration": "1 hour",
+      "fee": 20
+    },
+    {
+      "_id": 11,
+      "category": "Barre",
+      "name": "Barre Sculpt - Graceful Strength",
+      "description": "Barre Sculpt is a ballet-inspired workout that blends elements of ballet, Pilates, and strength training. Focus on isometric movements and small, precise movements to sculpt and tone your muscles. Our experienced instructors will guide you through a series of barre exercises, helping you improve flexibility, balance, and posture. Whether you're a dancer or a fitness enthusiast, Barre Sculpt is a graceful way to strengthen and shape your body.",
+      "enrolledStudents": 18,
+      "instructor": "Lily Anderson",
+      "duration": "1 hour",
+      "fee": 26
+    },
+    {
+      "_id": 12,
+      "category": "Functional Fitness",
+      "name": "Functional Fitness - Everyday Strength",
+      "description": "Functional Fitness is a practical class that focuses on building strength and flexibility for everyday activities. This class emphasizes functional movements like squats, lunges, and lifts to improve your overall fitness and mobility. Our trainers will guide you through exercises that mimic real-life movements, enhancing your ability to perform daily tasks with ease. Whether you're a beginner or an athlete, Functional Fitness will help you achieve functional strength for a more active lifestyle.",
+      "enrolledStudents": 15,
+      "instructor": "Robert Turner",
+      "duration": "1 hour",
+      "fee": 22
+    },
+    {
+      "_id": 13,
+      "category": "Dance",
+      "name": "Aqua Zumba - Dance in the Pool",
+      "description": "Aqua Zumba is a fun and dynamic water dance workout that takes the Zumba experience to the pool. Move to the rhythm of Latin and international music while enjoying the buoyancy of the water. Aqua Zumba is a low-impact class that provides a full-body workout, improving cardiovascular fitness and toning muscles. Our certified Aqua Zumba instructors will lead you through easy-to-follow dance moves that add a splash of excitement to your fitness routine.",
+      "enrolledStudents": 12,
+      "instructor": "Emily Davis",
+      "duration": "1 hour",
+      "fee": 20
+    },
+    {
+      "_id": 14,
+      "category": "Dance",
+      "name": "Hip Hop Dance - Groove & Move",
+      "description": "Hip Hop Dance is an energetic and expressive class that allows you to unleash your inner dancer. Learn the latest hip-hop dance moves and choreography while getting an intense cardio workout. Our experienced instructors will break down the steps, making it accessible for all levels of experience. Experience the joy of dancing, boost your confidence, and groove to the latest beats in Hip Hop Dance.",
+      "enrolledStudents": 28,
+      "instructor": "Alex Turner",
+      "duration": "1 hour",
+      "fee": 22
+    },
+    {
+      "_id": 15,
+      "category": "Dance",
+      "name": "Bollywood Beats - Indian Dance",
+      "description": "Bollywood Beats is a vibrant dance class that brings the energetic moves of Bollywood to the fitness world. Experience the excitement and glamour of Indian dance while getting a fantastic cardio workout. Our talented instructors will guide you through Bollywood-inspired choreography that celebrates the spirit of Bollywood films. Whether you're familiar with Indian dance or a novice, Bollywood Beats will transport you to the colorful world of Bollywood.",
+      "enrolledStudents": 14,
+      "instructor": "Sophia Lee",
+      "duration": "1 hour",
+      "fee": 18
+    },
+    {
+      "_id": 16,
+      "category": "Dance",
+      "name": "Salsa Sizzle - Latin Dance",
+      "description": "Salsa Sizzle is a fiery and sensual Latin dance class that will make you fall in love with Salsa. Learn the basic steps, turns, and patterns of Salsa dancing while enjoying the passion and rhythm of Latin music. Our skilled instructors will guide you through partner work and solo routines, ensuring an exhilarating and enjoyable experience. No partner is required to join Salsa Sizzle; just bring your enthusiasm for dance and let the Latin beats move your feet.",
+      "enrolledStudents": 10,
+      "instructor": "Jane Smith",
+      "duration": "1.5 hours",
+      "fee": 25
+    },
+    {
+      "_id": 17,
+      "category": "Aqua Fitness",
+      "name": "Aqua Dance Fitness - Dance in the Pool",
+      "description": "Aqua Dance Fitness is a dynamic water dance class that combines the fun of dancing with the benefits of aquatic exercise. Move to the rhythm of lively music and experience a full-body workout in the water. Aqua Dance Fitness is low-impact, making it suitable for all ages and fitness levels. Our certified instructors will lead you through easy-to-follow dance routines that target different muscle groups. Dive into Aqua Dance Fitness and experience a refreshing and invigorating workout in the pool.",
+      "enrolledStudents": 12,
+      "instructor": "Michael Thompson",
+      "duration": "1 hour",
+      "fee": 20
+    }
+  ]

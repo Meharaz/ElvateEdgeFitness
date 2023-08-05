@@ -1,0 +1,138 @@
+[
+    {
+        "id": 1,
+        "image": "https://i.ibb.co/VgSDQz9/PXL-20230601-083309374-3-removebg-preview.png",
+        "name": "John Doe",
+        "email": "john.doe@example.com",
+        "numClasses": 5,
+        "classes": [
+            "HIIT Blast - High-Intensity Interval Training",
+           
+            "AquaFit - Water Workout"
+        ]
+    },
+    {
+        "id": 2,
+        "image": "instructor2.jpg",
+        "name": "Jane Smith",
+        "email": "jane.smith@example.com",
+        "numClasses": 4,
+        "classes": [
+            "Bootcamp Challenge - Total Body Conditioning",
+           
+            "Mindful Meditation - Find Inner Calm",
+            "Barre Sculpt - Graceful Strength"
+        ]
+    },
+    {
+        "id": 3,
+        "image": "instructor3.jpg",
+        "name": "Mike Johnson",
+        "email": "mike.johnson@example.com",
+        "numClasses": 3,
+        "classes": [
+            "Spin Cycle - Ride to the Rhythm",
+            "Functional Fitness - Everyday Strength",
+            "BoxFit - Empower Your Inner Fighter"
+        ]
+    },
+    {
+        "id": 4,
+        "image": "instructor4.jpg",
+        "name": "Emily Davis",
+        "email": "emily.davis@example.com",
+        "numClasses": 3,
+        "classes": [
+            "Zumba Dance Party - Groove & Sweat",
+            "Yoga Fusion - Balance & Harmony",
+            "Pilates Fusion - Core Strengthening"
+        ]
+    },
+    {
+        "id": 5,
+        "image": "instructor5.jpg",
+        "name": "Alex Turner",
+        "email": "alex.turner@example.com",
+        "numClasses": 3,
+        "classes": [
+            "HIIT Blast - High-Intensity Interval Training",
+            "Bootcamp Challenge - Total Body Conditioning",
+            "Strength & Sculpt - Tone Your Muscles"
+        ]
+    },
+    {
+        "id": 6,
+        "image": "instructor6.jpg",
+        "name": "Sophia Lee",
+        "email": "sophia.lee@example.com",
+        "numClasses": 2,
+        "classes": [
+            "Mindful Meditation - Find Inner Calm",
+            "AquaFit - Water Workout"
+        ]
+    },
+    {
+        "id": 7,
+        "image": "instructor7.jpg",
+        "name": "Olivia Williams",
+        "email": "olivia.williams@example.com",
+        "numClasses": 2,
+        "classes": [
+            "Pilates Fusion - Core Strengthening",
+            "Barre Sculpt - Graceful Strength"
+        ]
+    },
+    {
+        "id": 8,
+        "image": "instructor8.jpg",
+        "name": "David Martinez",
+        "email": "david.martinez@example.com",
+        "numClasses": 2,
+        "classes": [
+            "BoxFit - Empower Your Inner Fighter",
+            "HIIT Blast - High-Intensity Interval Training"
+        ]
+    },
+    {
+        "id": 9,
+        "image": "instructor9.jpg",
+        "name": "Sarah Johnson",
+        "email": "sarah.johnson@example.com",
+        "numClasses": 2,
+        "classes": [
+            "Bootcamp Challenge - Total Body Conditioning",
+            "Yoga Fusion - Balance & Harmony"
+        ]
+    },
+    {
+        "id": 10,
+        "image": "instructor10.jpg",
+        "name": "Michael Thompson",
+        "email": "michael.thompson@example.com",
+        "numClasses": 2,
+        "classes": [
+            "AquaFit - Water Workout",
+            "Pilates Fusion - Core Strengthening"
+        ]
+    },
+    {
+        "id": 11,
+        "image": "instructor11.jpg",
+        "name": "Lily Anderson",
+        "email": "lily.anderson@example.com",
+        "numClasses": 1,
+        "classes": [
+            "Barre Sculpt - Graceful Strength"
+        ]
+    },
+    {
+        "id": 12,
+        "image": "instructor12.jpg",
+        "name": "Robert Turner",
+        "email": "robert.turner@example.com",
+        "numClasses": 4,
+        "classes": [
+            "Functional Fitness - Everyday Strength"
+        ]
+    }
+]
