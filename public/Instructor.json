@@ -1,6 +1,6 @@
 [
     {
-        "id": 1,
+    
         "image": "https://i.ibb.co/VgSDQz9/PXL-20230601-083309374-3-removebg-preview.png",
         "name": "John Doe",
         "email": "john.doe@example.com",
@@ -12,8 +12,8 @@
         ]
     },
     {
-        "id": 2,
-        "image": "instructor2.jpg",
+      
+        "image": "https://i.ibb.co/VgSDQz9/PXL-20230601-083309374-3-removebg-preview.png",
         "name": "Jane Smith",
         "email": "jane.smith@example.com",
         "numClasses": 4,
@@ -25,8 +25,8 @@
         ]
     },
     {
-        "id": 3,
-        "image": "instructor3.jpg",
+      
+        "image": "https://i.ibb.co/VgSDQz9/PXL-20230601-083309374-3-removebg-preview.png",
         "name": "Mike Johnson",
         "email": "mike.johnson@example.com",
         "numClasses": 3,
@@ -37,8 +37,8 @@
         ]
     },
     {
-        "id": 4,
-        "image": "instructor4.jpg",
+   
+        "image": "https://i.ibb.co/VgSDQz9/PXL-20230601-083309374-3-removebg-preview.png",
         "name": "Emily Davis",
         "email": "emily.davis@example.com",
         "numClasses": 3,
@@ -49,8 +49,8 @@
         ]
     },
     {
-        "id": 5,
-        "image": "instructor5.jpg",
+  
+        "image": "https://i.ibb.co/VgSDQz9/PXL-20230601-083309374-3-removebg-preview.png",
         "name": "Alex Turner",
         "email": "alex.turner@example.com",
         "numClasses": 3,
@@ -61,8 +61,8 @@
         ]
     },
     {
-        "id": 6,
-        "image": "instructor6.jpg",
+     
+        "image": "https://i.ibb.co/VgSDQz9/PXL-20230601-083309374-3-removebg-preview.png",
         "name": "Sophia Lee",
         "email": "sophia.lee@example.com",
         "numClasses": 2,
@@ -72,8 +72,8 @@
         ]
     },
     {
-        "id": 7,
-        "image": "instructor7.jpg",
+      
+        "image": "https://i.ibb.co/VgSDQz9/PXL-20230601-083309374-3-removebg-preview.png",
         "name": "Olivia Williams",
         "email": "olivia.williams@example.com",
         "numClasses": 2,
@@ -83,8 +83,8 @@
         ]
     },
     {
-        "id": 8,
-        "image": "instructor8.jpg",
+
+        "image": "https://i.ibb.co/VgSDQz9/PXL-20230601-083309374-3-removebg-preview.png",
         "name": "David Martinez",
         "email": "david.martinez@example.com",
         "numClasses": 2,
@@ -94,8 +94,8 @@
         ]
     },
     {
-        "id": 9,
-        "image": "instructor9.jpg",
+       
+        "image": "https://i.ibb.co/VgSDQz9/PXL-20230601-083309374-3-removebg-preview.png",
         "name": "Sarah Johnson",
         "email": "sarah.johnson@example.com",
         "numClasses": 2,
@@ -105,8 +105,8 @@
         ]
     },
     {
-        "id": 10,
-        "image": "instructor10.jpg",
+        
+        "image": "https://i.ibb.co/VgSDQz9/PXL-20230601-083309374-3-removebg-preview.png",
         "name": "Michael Thompson",
         "email": "michael.thompson@example.com",
         "numClasses": 2,
@@ -116,8 +116,8 @@
         ]
     },
     {
-        "id": 11,
-        "image": "instructor11.jpg",
+     
+        "image": "https://i.ibb.co/VgSDQz9/PXL-20230601-083309374-3-removebg-preview.png",
         "name": "Lily Anderson",
         "email": "lily.anderson@example.com",
         "numClasses": 1,
@@ -126,8 +126,8 @@
         ]
     },
     {
-        "id": 12,
-        "image": "instructor12.jpg",
+  
+        "image": "https://i.ibb.co/VgSDQz9/PXL-20230601-083309374-3-removebg-preview.png",
         "name": "Robert Turner",
         "email": "robert.turner@example.com",
         "numClasses": 4,

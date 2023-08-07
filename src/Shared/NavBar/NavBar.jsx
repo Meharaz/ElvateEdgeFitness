@@ -1,13 +1,39 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../Provider/AuthProvider';
+import { MdClass } from "react-icons/md";
 
 const NavBar = () => {
+    const { user, logOut } = useContext(AuthContext);
+
+    const handleLogOut = () => {
+        logOut()
+            .then(() => { })
+            .catch(err => console.log(err))
+    }
+
     const navOptions = <>
         <li><Link to="/">Home</Link></li>
-        <li><Link to="/price">Prices</Link></li>
-        <li><Link to="/portfolio">Portfolio</Link></li>
+        <li><Link to="/instructors">Instructors</Link></li>
+        <li><Link to="/classes">Classes</Link></li>
         <li><Link to="/blog">Blog</Link></li>
-        <li><Link to="/Login">Login</Link></li>
+
+        {
+            user ?
+                <>
+
+                    <li>
+
+                        <button onClick={handleLogOut} className="btn btn-ghost">Logout</button>
+                    </li>
+                </>
+                :
+                <>
+                    <li>
+                        <Link to="/Login">Login</Link>
+                    </li>
+                </>
+        }
     </>
     return (
         <div>
@@ -30,7 +56,22 @@ const NavBar = () => {
                         {navOptions}
                     </ul>
                 </div>
-                <div className="navbar-end">
+                <div className="navbar-end gap-4">
+                    <Link to='/dashboard/mycart'>
+                        {
+                            user ? <div className="tooltip  tooltip-bottom" data-tip={user.displayName}>
+                                <img src={user.photoURL} alt="" className='w-16 h-16 rounded-full' />
+                            </div> : ''
+                        }
+                    </Link>
+                    <li>
+                        <Link to='/dashboard/carts'>
+                            <button className="btn">
+                                <MdClass />
+                                <div className="badge badge-secondary">+0</div>
+                            </button>
+                        </Link>
+                    </li>
                     <a className="btn btn-outline btn-warning">Buy Membership</a>
                 </div>
             </div>
