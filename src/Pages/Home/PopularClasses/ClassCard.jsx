@@ -15,7 +15,7 @@ const ClassCard = ({ item }) => {
         console.log(item);
         if(user && user.email){
             const orderClass = {classId: _id, name,  fee, email: user.email, photo}
-            fetch('http://localhost:5000/carts', {
+            fetch('https://elevate-edge-fitness-server.vercel.app/carts', {
                 method: "POST",
                 headers: {
                     'content-type': 'application/json'

@@ -20,7 +20,7 @@ const AddClass = () => {
 
         const newClass = { name, instructor, category, duration, photo, email, fee, vacancy, description}
         console.log(newClass)
-        fetch('http://localhost:5000/classes', {
+        fetch('https://elevate-edge-fitness-server.vercel.app/classes', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

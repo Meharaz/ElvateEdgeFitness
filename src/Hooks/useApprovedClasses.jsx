@@ -4,7 +4,7 @@ const useApprovedClasses = () => {
     const [approvedClasses, setApprovedClasses] = useState([]);
     const [loading, setLoading] = useState(true);
     useEffect(() => {
-        fetch('http://localhost:5000/approvedClasses')
+        fetch('https://elevate-edge-fitness-server.vercel.app/approvedClasses')
             .then(res => res.json())
             .then(data => {
                 setApprovedClasses(data);

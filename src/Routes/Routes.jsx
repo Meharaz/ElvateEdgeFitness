@@ -61,7 +61,7 @@ export const router = createBrowserRouter([
       //       <InstructorInfo/>
       //     </PrivateRoutes>
       //   ),
-      //   loader: ({params}) => fetch(`http://localhost:5000/instructors/${params.id}`)
+      //   loader: ({params}) => fetch(`https://elevate-edge-fitness-server.vercel.app/instructors/${params.id}`)
       // }
     ]
   },

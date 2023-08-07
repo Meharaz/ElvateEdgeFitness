@@ -6,7 +6,7 @@ const useClasses = () => {
     const { refetch, data: classes } = useQuery({
         queryKey,
         queryFn: async () => {
-            const response = await fetch('http://localhost:5000/classes/')
+            const response = await fetch('https://elevate-edge-fitness-server.vercel.app/classes/')
             return response.json();
         }
 
@@ -17,7 +17,7 @@ const useClasses = () => {
     // const [classes, setClasses] = useState([]);
     // const [loading, setLoading] = useState(true);
     // useEffect(() => {
-    //     fetch('http://localhost:5000/classes/')
+    //     fetch('https://elevate-edge-fitness-server.vercel.app/classes/')
     //         .then(res => res.json())
     //         .then(data => {
     //             setClasses(data);

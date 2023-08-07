@@ -4,7 +4,7 @@ const useUsers = () => {
     const [users, setUsers] = useState();
     const [loading, setLoading] = useState();
     useEffect(() => {
-        fetch('http://localhost:5000/users')
+        fetch('https://elevate-edge-fitness-server.vercel.app/users')
             .then(res => res.json())
             .then(data => {
                 setUsers(data)

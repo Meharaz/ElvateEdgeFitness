@@ -11,7 +11,7 @@ const ManageClasses = () => {
     console.log(classes)
 
     const handleApprove = item => {
-        fetch(`http://localhost:5000/classes/approved/${item._id}`, {
+        fetch(`https://elevate-edge-fitness-server.vercel.app/classes/approved/${item._id}`, {
             method: 'PATCH'
         })
             .then(res => res.json())
@@ -30,7 +30,7 @@ const ManageClasses = () => {
             })
     }
     const handleDenied = item => {
-        fetch(`http://localhost:5000/classes/denied/${item._id}`, {
+        fetch(`https://elevate-edge-fitness-server.vercel.app/classes/denied/${item._id}`, {
             method: "PATCH",
         })
             .then(res => res.json())
@@ -49,7 +49,7 @@ const ManageClasses = () => {
             })
     }
     // const handleFeedback = item => {
-    //     fetch(`http://localhost:5000/feedback/${item._id}`, {
+    //     fetch(`https://elevate-edge-fitness-server.vercel.app/feedback/${item._id}`, {
     //         method: "PATCH",
     //     })
     //         .then(res => res.json())
