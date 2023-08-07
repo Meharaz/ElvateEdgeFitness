@@ -5,12 +5,14 @@ import { FaChalkboardTeacher, FaUserShield } from 'react-icons/fa';
 import Swal from 'sweetalert2';
 import SectionTitle from '../../../Components/SectionTitle/SectionTitle';
 import { useQuery } from '@tanstack/react-query';
+import useAxiosSecure from '../../../Hooks/useAxiosSecure';
 
 const Users = () => {
     // const [users, loading] = useUsers();
+    const [axiosSecure] = useAxiosSecure();
     const { data: users = [], refetch } = useQuery(['users'], async () => {
-        const res = await fetch('http://localhost:5000/users')
-        return res.json();
+        const res = await axiosSecure.get('/users')
+        return res.data;
     })
     const handleMakeAdmin = user => {
         fetch(`http://localhost:5000/users/admin/${user._id}`, {

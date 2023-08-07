@@ -1,12 +1,16 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { AuthContext } from '../../Provider/AuthProvider';
+
 import { MdClass } from "react-icons/md";
 import useCart from '../../Hooks/useCart';
+import useAdmin from '../../Hooks/useAdmin';
+import useAuth from '../../Hooks/useAuth';
 
 const NavBar = () => {
-    const { user, logOut } = useContext(AuthContext);
-    const [cart ] = useCart();
+    // const {logOut } = useContext(AuthContext);
+    const [cart] = useCart();
+    const { user, logOut } = useAuth();
+    const [isAdmin] = useAdmin();
     const handleLogOut = () => {
         logOut()
             .then(() => { })
@@ -58,21 +62,24 @@ const NavBar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end gap-4">
-                    <NavLink to='/dashboard/mycart'>
+                    <NavLink to='/dashboard/myProfile'>
                         {
                             user ? <div className="tooltip  tooltip-bottom" data-tip={user.displayName}>
                                 <img src={user.photoURL} alt="" className='w-16 h-16 rounded-full' />
                             </div> : ''
                         }
                     </NavLink>
-                    <li>
-                        <NavLink to='/dashboard/mycart'>
-                            <button className="btn">
-                                <MdClass />
-                                <div className="badge badge-secondary">+{cart?.length || 0}</div>
-                            </button>
-                        </NavLink>
-                    </li>
+                    {
+                        !isAdmin && user ? <li>
+                            <NavLink to='/dashboard/mycart'>
+                                <button className="btn">
+                                    <MdClass />
+                                    <div className="badge badge-secondary">+{cart?.length || 0}</div>
+                                </button>
+                            </NavLink>
+                        </li> :
+                            ''
+                    }
                     <a className="btn btn-outline btn-warning">Buy Membership</a>
                 </div>
             </div>

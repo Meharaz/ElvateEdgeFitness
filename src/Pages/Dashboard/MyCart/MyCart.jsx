@@ -2,8 +2,9 @@ import React from 'react';
 import useCart from '../../../Hooks/useCart';
 import SectionTitle from '../../../Components/SectionTitle/SectionTitle'
 import Swal from 'sweetalert2';
+import { Link } from 'react-router-dom';
 const MyCart = () => {
-    const [cart,refetch] = useCart();
+    const [cart, refetch] = useCart();
     console.log(cart);
     const total = cart.reduce((sum, item) => parseFloat(item.fee) + sum, 0)
     const handleDelete = item => {
@@ -41,7 +42,9 @@ const MyCart = () => {
             <div className='uppercase flex justify-around'>
                 <h1 className="text-3xl">Total Items: {cart.length}</h1>
                 <h1 className="text-3xl">Total Price: $ {total}</h1>
+                <Link to='/dashboard/paymentHistory'>
                 <button className="btn btn-warning btn-sm">Pay</button>
+                </Link>
             </div>
 
             <div>
@@ -86,7 +89,7 @@ const MyCart = () => {
                                     </td>
                                     <th>
                                         <button
-                                          onClick={()=>handleDelete(item)}
+                                            onClick={() => handleDelete(item)}
                                             className="btn btn-ghost btn-xs"
                                         >
                                             Remove item

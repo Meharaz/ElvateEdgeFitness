@@ -4,13 +4,12 @@ import { Helmet } from 'react-helmet-async';
 import { NavLink, Outlet } from 'react-router-dom';
 import { FaBook, FaChalkboardTeacher, FaHome, FaPlusSquare, FaRegCreditCard, FaShoppingCart, FaUser, FaUsers } from 'react-icons/fa';
 import { RiAdminLine } from "react-icons/ri";
-import useUsers from '../Hooks/useUsers';
 import useCart from '../Hooks/useCart';
 import useAdmin from '../Hooks/useAdmin';
 
 const Dashboard = () => {
     const [cart,] = useCart();
-    const { users } = useUsers();
+ 
     const [isAdmin] = useAdmin();
     // const isAdmin = true;
     return (
@@ -36,11 +35,11 @@ const Dashboard = () => {
                                         <RiAdminLine /> Admin
                                     </NavLink>
                                 </li>
-                                {/* <li>
+                                <li>
                                     <NavLink to='/dashboard/myProfile'>
                                         <FaUser /> My Profile
                                     </NavLink>
-                                </li> */}
+                                </li>
                                 <li>
                                     <NavLink to='/dashboard/users'>
                                         <FaUsers /> All Users

@@ -1,14 +1,19 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link, useNavigate, } from 'react-router-dom';
 import SocialLogin from './SocialLogin';
 import { AuthContext } from '../../Provider/AuthProvider';
 import { Helmet } from 'react-helmet-async';
 import Swal from 'sweetalert2';
+import { FaEye } from 'react-icons/fa';
 
 const Login = () => {
 
     const { signIn, } = useContext(AuthContext);
     const navigate = useNavigate('');
+    const [passwordVisible, setPasswordVisible] = useState(false);
+    const togglePasswordVisibility = () => {
+        setPasswordVisible(!passwordVisible);
+    };
 
     const handleLogin = event => {
         event.preventDefault();
@@ -29,7 +34,7 @@ const Login = () => {
                 })
                 navigate('/')
             })
-            .then(err => console.log(err) )
+            .then(err => console.log(err))
     }
 
 
@@ -55,9 +60,12 @@ const Login = () => {
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
-                                        <span className="label-text">Password</span>
+                                        <span className="label-text"> Password</span>
                                     </label>
-                                    <input type="password" placeholder="Password" name='password' className="input input-bordered" />
+                                    <input type={passwordVisible ? "text" : "password"} placeholder="Password" name='password' className="input input-bordered" />
+                                    <button className="btn-sm btn mt-2" onClick={togglePasswordVisibility}>
+                                        <FaEye /> View Password
+                                    </button>
                                     <label className="label">
                                         <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                                     </label>

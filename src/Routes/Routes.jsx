@@ -20,6 +20,7 @@ import ManageClasses from '../Pages/Dashboard/ManageClasses/ManageClasses';
 import AddClass from '../Pages/Dashboard/AddClass/AddClass';
 import Admin from '../Pages/Dashboard/Admin/Admin';
 import Error from '../Components/Error.jsx/Error';
+import AdminRoute from './AdminRoutes';
 
 
 
@@ -91,7 +92,7 @@ export const router = createBrowserRouter([
       },
       {
         path: 'addClass',
-        element: <AddClass />
+        element: <AdminRoute><AddClass /></AdminRoute>
       },
       {
         path: 'admin',
