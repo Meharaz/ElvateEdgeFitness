@@ -1,12 +1,18 @@
 import React from 'react';
-import SectionTitle from '../Components/SectionTitle/SectionTitle';
+
 import { Helmet } from 'react-helmet-async';
 import { NavLink, Outlet } from 'react-router-dom';
-import { FaBook, FaChalkboardTeacher, FaHome, FaPlusSquare, FaRegCreditCard, FaShoppingCart, FaUser } from 'react-icons/fa';
+import { FaBook, FaChalkboardTeacher, FaHome, FaPlusSquare, FaRegCreditCard, FaShoppingCart, FaUser, FaUsers } from 'react-icons/fa';
+import { RiAdminLine } from "react-icons/ri";
 import useUsers from '../Hooks/useUsers';
+import useCart from '../Hooks/useCart';
+import useAdmin from '../Hooks/useAdmin';
 
 const Dashboard = () => {
+    const [cart,] = useCart();
     const { users } = useUsers();
+    const [isAdmin] = useAdmin();
+    // const isAdmin = true;
     return (
         <>
             <Helmet>
@@ -23,39 +29,60 @@ const Dashboard = () => {
                 <div className="drawer-side ">
                     <label htmlFor="my-drawer-2 " className="drawer-overlay"></label>
                     <ul className="menu p-4 w-80  h-full bg-base-200 text-base-content">
-                        <li>
-                            <NavLink to='/dashboard/myProfile'>
-                                <FaUser /> My Profile
-                            </NavLink>
-                        </li>
-                        <li>
-                            <NavLink to='/dashboard/users'>
-                                <FaUser /> All Users
-                            </NavLink>
-                        </li>
-                        <li>
-                            <NavLink to='/dashboard/classes'>
-                                <FaChalkboardTeacher /> Manage Classes
-                            </NavLink>
-                        </li>
-                        <li>
-                            <NavLink to='/dashboard/myCart'>
-                                <FaShoppingCart /> My Cart
-                            </NavLink>
-                        </li>
-                        <li>
-                            <NavLink to='/dashboard/paymentHistory'>
-                                <FaRegCreditCard /> Payment History
-                            </NavLink>
-                        </li>
+                        {
+                            isAdmin ? <>
+                                <li>
+                                    <NavLink to='/dashboard/admin'>
+                                        <RiAdminLine /> Admin
+                                    </NavLink>
+                                </li>
+                                {/* <li>
+                                    <NavLink to='/dashboard/myProfile'>
+                                        <FaUser /> My Profile
+                                    </NavLink>
+                                </li> */}
+                                <li>
+                                    <NavLink to='/dashboard/users'>
+                                        <FaUsers /> All Users
+                                    </NavLink>
+                                </li>
+                                <li>
+                                    <NavLink to='/dashboard/classes'>
+                                        <FaChalkboardTeacher /> Manage Classes
+                                    </NavLink>
+                                </li>
+                            </>
+                                :
+                                <>
+                                    <li>
+                                        <NavLink to='/dashboard/myProfile'>
+                                            <FaUser /> My Profile
+                                        </NavLink>
+                                    </li>
+                                    <li>
+                                        <NavLink to='/dashboard/myCart'>
+                                            <FaShoppingCart /> My Cart <span className="badge badge-secondary">+{cart?.length || 0}</span>
+                                        </NavLink>
+                                    </li>
+                                    <li>
+                                        <NavLink to='/dashboard/paymentHistory'>
+                                            <FaRegCreditCard /> Payment History
+                                        </NavLink>
+                                    </li>
 
-                       
-                        
-                        <li>
-                            <NavLink to='/dashboard/addClass'>
-                                <FaPlusSquare /> Add Class
-                            </NavLink>
-                        </li>
+
+
+                                    <li>
+                                        <NavLink to='/dashboard/addClass'>
+                                            <FaPlusSquare /> Add Class
+                                        </NavLink>
+                                    </li>
+
+                                </>
+                        }
+
+
+
 
 
 

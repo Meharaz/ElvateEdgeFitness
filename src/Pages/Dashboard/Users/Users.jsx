@@ -1,15 +1,17 @@
 import React from 'react';
-import useUsers from '../../../Hooks/useUsers';
+// import useUsers from '../../../Hooks/useUsers';
 import { Helmet } from 'react-helmet-async';
-import { FaChalkboardTeacher, FaTrashAlt, FaUserShield } from 'react-icons/fa';
+import { FaChalkboardTeacher, FaUserShield } from 'react-icons/fa';
 import Swal from 'sweetalert2';
 import SectionTitle from '../../../Components/SectionTitle/SectionTitle';
+import { useQuery } from '@tanstack/react-query';
 
 const Users = () => {
-    const [users, loading] = useUsers();
-
-    console.log(users)
-
+    // const [users, loading] = useUsers();
+    const { data: users = [], refetch } = useQuery(['users'], async () => {
+        const res = await fetch('http://localhost:5000/users')
+        return res.json();
+    })
     const handleMakeAdmin = user => {
         fetch(`http://localhost:5000/users/admin/${user._id}`, {
             method: 'PATCH'
@@ -18,7 +20,9 @@ const Users = () => {
             .then(data => {
                 console.log(data)
                 if (data.modifiedCount) {
+
                     Swal.fire({
+
                         position: 'top-end',
                         icon: 'success',
                         title: `${user.name} is an Admin Now!`,
@@ -53,9 +57,9 @@ const Users = () => {
             <Helmet>
                 <title>ElevateEdge | All users</title>
             </Helmet>
-            <SectionTitle subHeading={'Manage users'} heading={'All users'}/>
+            <SectionTitle subHeading={'Manage users'} heading={'All users'} />
             <h3 className="text-3xl font-semibold my-4">
-                Total Users: {loading ? 'Loading...' : users?.length}
+                Total Users: {users.length}
             </h3>
             <div className="overflow-x-auto">
                 <table className="table w-full bg-slate-700">
@@ -94,11 +98,11 @@ const Users = () => {
                                                 'instructor'
                                             ) : (
                                                 <button
-                                            onClick={() => handleMakeInstructor(user)}
-                                            className="btn btn-ghost bg-red-600 text-white"
-                                        >
-                                            <FaChalkboardTeacher />
-                                        </button>
+                                                    onClick={() => handleMakeInstructor(user)}
+                                                    className="btn btn-ghost bg-red-600 text-white"
+                                                >
+                                                    <FaChalkboardTeacher />
+                                                </button>
                                             )
                                         }
                                     </td>

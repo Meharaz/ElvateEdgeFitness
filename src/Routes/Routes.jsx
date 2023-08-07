@@ -18,6 +18,8 @@ import MyProfile from '../Pages/Dashboard/MyProfile/MyProfile';
 import Users from '../Pages/Dashboard/Users/Users';
 import ManageClasses from '../Pages/Dashboard/ManageClasses/ManageClasses';
 import AddClass from '../Pages/Dashboard/AddClass/AddClass';
+import Admin from '../Pages/Dashboard/Admin/Admin';
+import Error from '../Components/Error.jsx/Error';
 
 
 
@@ -25,6 +27,7 @@ export const router = createBrowserRouter([
   {
     path: "/",
     element: <Main />,
+    errorElement: <Error />,
     children: [
       {
         path: '/',
@@ -59,12 +62,12 @@ export const router = createBrowserRouter([
       //   ),
       //   loader: ({params}) => fetch(`http://localhost:5000/instructors/${params.id}`)
       // }
-
     ]
   },
   {
     path: 'dashboard',
     element: <PrivateRoutes><Dashboard /></PrivateRoutes>,
+    errorElement: <Error />,
     children: [
       {
         path: 'myCart',
@@ -80,15 +83,19 @@ export const router = createBrowserRouter([
       },
       {
         path: 'users',
-        element: <Users/>
+        element: <Users />
       },
       {
         path: 'classes',
-        element: <ManageClasses/>
+        element: <ManageClasses />
       },
       {
         path: 'addClass',
-        element: <AddClass/>
+        element: <AddClass />
+      },
+      {
+        path: 'admin',
+        element: <Admin />
       }
     ]
   }

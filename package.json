@@ -12,6 +12,7 @@
   "dependencies": {
     "@egjs/react-flicking": "^4.11.0",
     "@tanstack/react-query": "^4.32.6",
+    "axios": "^1.4.0",
     "firebase": "^10.1.0",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.1",

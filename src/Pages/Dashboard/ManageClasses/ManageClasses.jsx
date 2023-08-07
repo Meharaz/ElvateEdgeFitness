@@ -2,11 +2,12 @@ import React from 'react';
 import useClasses from '../../../Hooks/useClasses';
 import { Helmet } from 'react-helmet-async';
 import SectionTitle from '../../../Components/SectionTitle/SectionTitle';
-import { FaChalkboardTeacher, FaUserShield } from 'react-icons/fa';
+
+import { TiTick } from "react-icons/ti";
 import Swal from 'sweetalert2';
 
 const ManageClasses = () => {
-    const [classes] = useClasses();
+    const [classes , refetch] = useClasses();
     console.log(classes)
 
     const handleApprove = item => {
@@ -24,27 +25,47 @@ const ManageClasses = () => {
                         showConfirmButton: false,
                         timer: 1500
                     })
+                    refetch();
                 }
             })
     }
-    const handleDelete = item => {
-        fetch(`http://localhost:5000/classes/${item._id}`, {
-            method: "DELETE",
+    const handleDenied = item => {
+        fetch(`http://localhost:5000/classes/denied/${item._id}`, {
+            method: "PATCH",
         })
             .then(res => res.json())
             .then(data => {
                 console.log(data)
-                if (data.deletedCount > 0) {
+                if (data.modifiedCount > 0) {
                     Swal.fire({
                         position: 'top-end',
                         icon: 'success',
-                        title: `${item.name} is an removed!`,
+                        title: `${item.name} is an Denied!`,
                         showConfirmButton: false,
                         timer: 1500
                     })
+                    refetch();
                 }
             })
     }
+    // const handleFeedback = item => {
+    //     fetch(`http://localhost:5000/feedback/${item._id}`, {
+    //         method: "PATCH",
+    //     })
+    //         .then(res => res.json())
+    //         .then(data => {
+    //             console.log(data)
+    //             if (data.deletedCount > 0) {
+    //                 Swal.fire({
+    //                     position: 'top-end',
+    //                     icon: 'success',
+    //                     title: `${item.name} is an removed!`,
+    //                     showConfirmButton: false,
+    //                     timer: 1500
+    //                 })
+    //             }
+    //         })
+    // }
 
     return (
         <div className='w-full px-1'>
@@ -59,6 +80,7 @@ const ManageClasses = () => {
                         <th>Class</th>
                         <th>Instructor</th>
                         <th>Category</th>
+                        <th>Status</th>
                         <th>Action</th>
                     </tr>
                 </thead>
@@ -72,22 +94,34 @@ const ManageClasses = () => {
                                 <th>{item.category}</th>
                                 <th>
                                     {
+                                        item.status === 'approved' ? 'Approved' :
+                                            item.status === 'denied' ? 'Denied' :
+                                                'Pending'
+                                    }
+
+                                </th>
+                                <th>
+                                    {
                                         item.status === 'approved' ? (
                                             'Approved'
-                                        ) : (
-                                            <>
-                                            <button className='btn' 
-                                            onClick={() => handleApprove(item)}
-                                            >
-                                                approve
-                                            </button>
-                                            <button className="btn btn-sm btn-circle ms-2 me-0"
-                                            onClick={()=> handleDelete(item)}
-                                            >
-                                                x
-                                            </button>
-                                        </>
-                                        )
+                                        ) :
+                                            item.status === 'denied' ? (
+                                                'Denied'
+                                            ) :
+                                                (
+                                                    <>
+                                                        <button className='btn btn-sm btn-circle'
+                                                            onClick={() => handleApprove(item)}
+                                                        >
+                                                            <TiTick className='text-green-400' />
+                                                        </button>
+                                                        <button className="btn btn-sm btn-circle ms-2 me-0"
+                                                            onClick={() => handleDenied(item)}
+                                                        >
+                                                            x
+                                                        </button>
+                                                    </>
+                                                )
                                     }
                                 </th>
                             </tr>

@@ -1,11 +1,12 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProvider';
 import { MdClass } from "react-icons/md";
+import useCart from '../../Hooks/useCart';
 
 const NavBar = () => {
     const { user, logOut } = useContext(AuthContext);
-
+    const [cart ] = useCart();
     const handleLogOut = () => {
         logOut()
             .then(() => { })
@@ -13,10 +14,10 @@ const NavBar = () => {
     }
 
     const navOptions = <>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/instructors">Instructors</Link></li>
-        <li><Link to="/classes">Classes</Link></li>
-        <li><Link to="/blog">Blog</Link></li>
+        <li><NavLink to="/">Home</NavLink></li>
+        <li><NavLink to="/instructors">Instructors</NavLink></li>
+        <li><NavLink to="/classes">Classes</NavLink></li>
+        <li><NavLink to="/blog">Blog</NavLink></li>
 
         {
             user ?
@@ -30,7 +31,7 @@ const NavBar = () => {
                 :
                 <>
                     <li>
-                        <Link to="/Login">Login</Link>
+                        <NavLink to="/Login">Login</NavLink>
                     </li>
                 </>
         }
@@ -57,20 +58,20 @@ const NavBar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end gap-4">
-                    <Link to='/dashboard/mycart'>
+                    <NavLink to='/dashboard/mycart'>
                         {
                             user ? <div className="tooltip  tooltip-bottom" data-tip={user.displayName}>
                                 <img src={user.photoURL} alt="" className='w-16 h-16 rounded-full' />
                             </div> : ''
                         }
-                    </Link>
+                    </NavLink>
                     <li>
-                        <Link to='/dashboard/carts'>
+                        <NavLink to='/dashboard/mycart'>
                             <button className="btn">
                                 <MdClass />
-                                <div className="badge badge-secondary">+0</div>
+                                <div className="badge badge-secondary">+{cart?.length || 0}</div>
                             </button>
-                        </Link>
+                        </NavLink>
                     </li>
                     <a className="btn btn-outline btn-warning">Buy Membership</a>
                 </div>
